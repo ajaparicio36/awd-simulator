@@ -32,12 +32,12 @@ streamlit run app.py
 docker build -t smart-paddy .
 ```
 
-# Bash/Zsh (uses PORT if set, defaults to 8501):
+Bash/Zsh (uses `PORT` if set, defaults to 8501):
 ```bash
 docker run --rm -e PORT=${PORT:-8501} -p ${PORT:-8501}:${PORT:-8501} smart-paddy
 ```
 
-# Shell-agnostic fixed-port option:
+Shell-agnostic fixed-port:
 ```bash
 docker run --rm -e PORT=8501 -p 8501:8501 smart-paddy
 ```
